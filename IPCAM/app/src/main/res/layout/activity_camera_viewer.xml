@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_camera_viewer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rina.ipcam.CameraViewerActivity">
+
+    <!--  <com.andretietz.android.controller.DirectionView
+        android:id="@+id/viewDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom|right"
+        />-->
+
+    <SurfaceView
+        android:layout_width="667dp"
+        android:layout_height="371dp"
+        android:layout_margin="0dp"
+        android:id="@+id/surfaceView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_gravity="bottom|left"
+        >
+
+
+        <Button
+            android:text="stop"
+            android:layout_height="54dp"
+            android:id="@+id/btnStop"
+            android:background="@drawable/round_button"
+            android:layout_width="88dp"
+            tools:layout_editor_absoluteY="107dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Button
+            android:layout_width="88dp"
+            android:layout_height="48dp"
+            android:id="@+id/button3"
+            tools:layout_editor_absoluteX="32dp"
+            android:layout_marginTop="16dp"
+
+            android:background="@drawable/round_button"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <com.jmedeisis.bugstick.Joystick
+        android:id="@+id/joystick"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_base"
+        app:start_on_first_touch="true"
+        app:force_square="true"
+        app:motion_constraint="None"
+        android:layout_gravity="bottom|right"
+        >
+
+        <Button
+            android:layout_width="64dp"
+            android:layout_height="64dp" />
+    </com.jmedeisis.bugstick.Joystick>
+
+</android.widget.FrameLayout>
