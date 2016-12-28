@@ -26,28 +26,58 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="180dp"
-        android:layout_height="200dp"
-        android:layout_gravity="bottom|left"
-        >
-
+        android:layout_width="100dp"
+        android:layout_height="67dp">
 
         <Button
-            android:layout_height="58dp"
-            android:id="@+id/btnCapture"
-            android:background="@drawable/round_button"
-            android:layout_width="wrap_content"
-            tools:layout_editor_absoluteY="106dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintLeft_toLeftOf="parent" />
-
-        <Button
-            android:layout_width="88dp"
             android:layout_height="48dp"
-            android:id="@+id/button3"
-            tools:layout_editor_absoluteX="32dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="@drawable/ic_arrow_back_white_24dp"
+            android:id="@+id/btnBack"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_width="48dp" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_gravity="bottom|left"
+        android:layout_height="288dp"
+        android:layout_width="144dp">
+
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:background="@drawable/ic_camera_alt_indigo_50_36dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnZoomOut"
+            app:layout_constraintLeft_toLeftOf="@+id/btnZoomOut"
+            app:layout_constraintRight_toRightOf="@+id/btnZoomOut"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_width="48dp" />
+
+        <Button
+            android:layout_height="48dp"
+            android:id="@+id/btnZoomIn"
+            android:background="@drawable/ic_zoom_in24dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintHorizontal_bias="0.21"
+            android:layout_width="48dp" />
+
+        <Button
+            android:layout_height="48dp"
+            android:id="@+id/btnZoomOut"
+            android:background="@drawable/ic_zoom_out24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnZoomIn"
+            app:layout_constraintLeft_toLeftOf="@+id/btnZoomIn"
+            app:layout_constraintRight_toRightOf="@+id/btnZoomIn"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_width="48dp" />
+
     </android.support.constraint.ConstraintLayout>
 
     <com.jmedeisis.bugstick.Joystick
@@ -65,7 +95,8 @@
 
         <Button
             android:layout_width="64dp"
-            android:layout_height="64dp" />
+            android:layout_height="64dp"
+            android:elevation="0dp" />
     </com.jmedeisis.bugstick.Joystick>
 
 </android.widget.FrameLayout>
